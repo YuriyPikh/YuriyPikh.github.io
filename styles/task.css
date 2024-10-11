@@ -1,0 +1,85 @@
+/* Оформлення для основних елементів */
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bagg6.avif'); /* Замість background.jpg підставте шлях до вашого зображення */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #251c29;
+    color: #fff;
+    background-color: rgba(16, 14, 16, 0.559); /* Фоновий колір з прозорістю */
+}
+@keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+.sinop{
+  display: flex; /* Встановлюємо flexbox для горизонтального вирівнювання */
+  justify-content: center; /* Горизонтальне вирівнювання по центру */
+  align-items: center; /* Вертикальне вирівнювання по центру (якщо необхідно) */
+  text-align: center; /* Вирівнювання тексту по центру */
+  margin-bottom: 20px;
+}
+
+.survey-container {
+  font-family: Arial, sans-serif;
+  width: 56%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #826868;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+h2 {
+  text-align: center;
+  color: #000000;
+}
+h3 {
+  text-align: center;
+  margin-top: 30px;
+}
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.question {
+  margin: 10px 0;
+}
+label {
+  margin-left: 10px;
+}
+.results {
+  margin-top: 20px;
+}
+.result-bar {
+  height: 20px;
+  background-color: #59362b;
+  text-align: right;
+  padding-right: 5px;
+  color: white;
+  border-radius: 5px;
+}
+.button {
+  background-color: #cb7168;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.button:hover {
+  background-color: #45a049;
+}
+

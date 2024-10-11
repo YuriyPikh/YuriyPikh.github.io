@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctic Monkeys Members</title>
+    <link href="styles/style_members.css" rel="stylesheet">
+    <link href="styles/page_navigation.css" rel="stylesheet">
+    <link href="styles/load.css" rel="stylesheet">
+    <link href="styles/transition.css" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="preloader"></div>
+    <div class="transition transition-1 is-active"></div>
+
+    <!-- Background Image Section -->
+    <div class="background">
+
+        <nav>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="plates.html"class="nav-item">Plates</a>
+            <a href="members.html"class="nav-item active">Band</a>
+            <a href="history.html"class="nav-item">History</a>
+            
+        </nav>
+
+        <img src="img/pngwing.com.png" alt="Arctic Monkeys Logo" class="vinyl-picture">
+
+        <div class="photo-grid">   
+            <!-- Alexander Turner -->
+            <div class="member">
+                <img src="img/1.jpg" alt="Alex Turner">
+                <h2>Alex David Turner</h2>
+                <p><strong>Born:</strong> January 6, 1986</p>
+                <p>Alex Turner is the frontman and lead singer-songwriter of the rock band Arctic Monkeys. Known for his lyricism ranging from kitchen sink realism to surrealist wordplay.</p>
+            </div>
+
+            <!-- Matthew Helders -->
+            <div class="member">
+                <img src="img/2.jpg" alt="Matthew Helders">
+                <h2>Matthew Helders</h2>
+                <p><strong>Born:</strong> May 7, 1986</p>
+                <p>Matthew Helders is the drummer, vocalist, and songwriter for Arctic Monkeys. He is a founding member of the band and has recorded seven studio albums with them.</p>
+            </div>
+
+            <!-- Jamie Cook -->
+            <div class="member">
+                <img src="img/3.jpg" alt="Jamie Cook">
+                <h2>Jamie Robert Cook</h2>
+                <p><strong>Born:</strong> July 8, 1985</p>
+                <p>Jamie Cook is the rhythm and lead guitarist of Arctic Monkeys, as well as a founding member. He has recorded six studio albums with the band.</p>
+            </div>
+
+            <!-- Nicholas O'Malley -->
+            <div class="member">
+                <img src="img/4.jpg" alt="Nicholas O'Malley">
+                <h2>Nicholas O'Malley</h2>
+                <p><strong>Born:</strong> July 5, 1985</p>
+                <p>Nicholas O'Malley is the bass guitarist and backing vocalist of Arctic Monkeys. He joined the band as a replacement for their previous bassist, Andy Nicholson.</p>
+            </div>
+        </div> 
+        <button class="arrow left-arrow">&#8249;</button> <!-- Left Arrow -->
+        <button class="arrow right-arrow">&#8250;</button> <!-- Right Arrow -->
+
+        <div class="indicator-container">
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+        </div>
+
+    </div>
+    <script src="scripts/nav_script.js"></script>
+    <script src="scripts/load_script.js"></script>
+    <script src="scripts/transition.js"></script>
+    <script src="scripts/members_moving.js"></script>
+</body>
+</html>

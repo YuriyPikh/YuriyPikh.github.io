@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Background Image */
+.background {   
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/arctic-monkeys-am-photography-monochrome-wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5) contrast(1.1); /* Apply filter only to the background image */
+    z-index: -1;
+}
+
+ /* Container for all clickable items */
+ .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
+    grid-gap: 5px; /* Space between items */
+    justify-items: center; /* Center each item horizontally */
+    align-items: center; /* Center each item vertically */
+    padding: 5px;
+}
+
+/* Each clickable photo with text */
+.photo-item {
+    text-align: center;
+    margin: 5px;
+    width: 200px;
+    height: 200px; /* Set a max width for each item */
+}
+
+.photo-grid  :nth-child(3) img{
+    transform: scale(1.25);
+}
+
+.photo-grid  :nth-child(2) img{
+    transform: scale(1.20);
+}
+
+
+/* Style for the images */
+.photo-item img {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+    cursor: pointer;
+}
+
+.photo-grid:nth-child(2) img :hover {
+    transform: scale(1.25);
+}
+
+
+/* Add hover effect on images */
+.photo-item img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+
+/* Text under the image */
+.photo-item p {
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-top: -20px;
+
+}
+
+/* Media query to adjust layout on smaller screens */
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: 1fr; /* change to 1 row*/
+    }
+}
+
+.photo-item.hidden {
+    opacity: 0;
+    pointer-events: none; /* Disable clicking */
+}
+
+.photo-item.active {
+    transform: translateX(-50%);
+    transform: scale(2.5); /* Make it bigger to stand out */
+}
+
+
+.track-list {
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    transform-origin: top left bottom right; 
+    right: 5%;
+    top: 10%; 
+    bottom: 10%;
+    align-items: center;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    list-style: none;
+    font-size: 115%;
+}
+
+.track-list.active {
+    display: block;
+}
+
+.photo-item.hidden {
+    opacity: 0;
+    pointer-events: none; /* Disable interaction */
+    transition: opacity 0.3s ease;
+}
+
+.track-box {
+    top: 18%;
+    left: 5%;
+    bottom: 18%;
+    right: 5%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Hidden by default */
+    opacity: 1; /* Default opacity */
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.track-box .item img {
+    box-sizing: border-box;
+    position: absolute;
+    transform-origin: top left bottom right; 
+
+    transform: scale(2.5); /* Ensure image scales properly in aside */
+
+    left: 15%;
+    bottom: 22%;
+    
+    
+}
+
+.track-box .item p{
+    display: none;
+
+}
+
+.track-list.active {
+    display: block;
+}
+
+.track-box .item {
+    position: relative;
+    overflow: hidden; /* Ensure that the image stays within the item area */
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+}
+
+
+.close-button {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    width: 3%;
+    color: white;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    right: 5%;
+    top: 12%;
+}
+
+.close-button:hover {
+    color: #a6a087;  /* Color change on hover */
+}
