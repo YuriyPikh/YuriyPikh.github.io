@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="styles/task.css" rel="stylesheet">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>додаток</title>
+  </head>
+  <body>
+
+<p style="margin:30px;text-align:center;">Погода у Львові та Городку:</p>
+
+<script src="scripts/task.js"></script>
+<div class="sinop">
+  <div id="SinoptikInformer" style="width:240px;" class="SinoptikInformer type1c1"><div class="siHeader"><div class="siLh"><div class="siMh"><a onmousedown="siClickCount();" class="siLogo" href="https://ua.sinoptik.ua/" target="_blank" rel="nofollow" title="Погода"> </a>Погода <span id="siHeader"></span></div></div></div><div class="siBody"><a onmousedown="siClickCount();" href="https://ua.sinoptik.ua/погода-львів" title="Погода у Львові" target="_blank"><div class="siCity"><div class="siCityName"><span>Львів</span></div><div id="siCont0" class="siBodyContent"><div class="siLeft"><div class="siTerm"></div><div class="siT" id="siT0"></div><div id="weatherIco0"></div></div><div class="siInf"><p>вологість: <span id="vl0"></span></p><p>тиск: <span id="dav0"></span></p><p>вітер: <span id="wind0"></span></p></div></div></div></a><a onmousedown="siClickCount();" href="https://ua.sinoptik.ua/погода-городок-303005879" title="Погода у Городку" target="_blank"><div class="siCity"><div class="siCityName"><span>Городок</span></div><div id="siCont1" class="siBodyContent"><div class="siLeft"><div class="siTerm"></div><div class="siT" id="siT1"></div><div id="weatherIco1"></div></div><div class="siInf"><p>вологість: <span id="vl1"></span></p><p>тиск: <span id="dav1"></span></p><p>вітер: <span id="wind1"></span></p></div></div></div></a><div class="siLinks">Погода на 10 днів від <a href="https://ua.sinoptik.ua/10-днів" title="Погода на 10 днів" target="_blank" onmousedown="siClickCount();"> sinoptik.ua</a></div></div><div class="siFooter"><div class="siLf"><div class="siMf"></div></div></div></div><script type="text/javascript" charset="UTF-8" src="//sinoptik.ua/informers_js.php?title=4&amp;wind=3&amp;cities=303014487,303005879&amp;lang=ua"></script>
+</div>
+
+<div class="survey-container">
+  <h2>Яка ваша улюблена пору року?</h2>
+
+  <form id="surveyForm">
+      <div class="question">
+          <input type="radio" id="spring" name="season" value="Spring">
+          <label for="spring">Весна</label>
+      </div>
+      <div class="question">
+          <input type="radio" id="summer" name="season" value="Summer">
+          <label for="summer">Літо</label>
+      </div>
+      <div class="question">
+          <input type="radio" id="autumn" name="season" value="Autumn">
+          <label for="autumn">Осінь</label>
+      </div>
+      <div class="question">
+          <input type="radio" id="winter" name="season" value="Winter">
+          <label for="winter">Зима</label>
+      </div>
+
+      <button type="button" class="button" onclick="submitSurvey()">Проголосувати</button>
+  </form>
+
+  <div id="results" class="results" style="display: none;">
+      <h3>Результати опитування:</h3>
+      <p>Весна: <span id="springVotes">0</span>%</p>
+      <div class="result-bar" id="springBar" style="width: 0%"></div>
+
+      <p>Літо: <span id="summerVotes">0</span>%</p>
+      <div class="result-bar" id="summerBar" style="width: 0%"></div>
+
+      <p>Осінь: <span id="autumnVotes">0</span>%</p>
+      <div class="result-bar" id="autumnBar" style="width: 0%"></div>
+
+      <p>Зима: <span id="winterVotes">0</span>%</p>
+      <div class="result-bar" id="winterBar" style="width: 0%"></div>
+  </div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+/* Navigation Menu */
+nav {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.indicator-container {
+    display: flex;
+    justify-content: center;
+    position: fixed; /* Fixed position at the bottom */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    gap: 5px; /* Space between dots */
+}
+
+/* Dot Indicators */
+.indicator {
+    height: 10px; /* Height of the dot */
+    width: 10px; /* Width of the dot */
+    border-color: rgba(255, 255, 255, 0.5); /* Color of the dot */
+    border-radius: 50%; /* Make it a circle */;
+    border-style: solid;
+    border-width: 2px;
+    transition: background-color 0.3s ease; /* Smooth transition for the dot */
+}
+
+.indicator.active {
+    background-color: white; /* Highlight active dot */
+}
+
+
+.arrow {
+    position: fixed; /* Fixed position on the sides */
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 60px; /* Arrow size */
+    color: white;
+    background: transparent; /* Make background transparent */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.arrow:hover{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.left-arrow {
+    left: 60px; /* Position left */
+}
+
+.right-arrow {
+    right: 60px; /* Position right */
+}
+
+.right-arrow,
+.left-arrow {
+    opacity: 1; /* Default opacity */
+    transition: opacity 0.3s ease; /* Transition for smooth fade-out */
+}
+
+.right-arrow.hidden,
+.left-arrow.hidden {
+    opacity: 0; /* Fade out opacity */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+/* Arctic Monkeys Vinyl Text */
+.vinyl-picture {
+    position: fixed; 
+    top: 3%; 
+    left: 1.5%; 
+    width: 6%; 
+    height: auto; 
+    z-index: 98; 
+    transition: transform 0.3s ease; 
+}
+
+.vinyl-picture:hover {
+    transform: scale(1.1); /* Scale up slightly when hovered */
+}

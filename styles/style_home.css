@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Background Image */
+.background {
+    background-image: url('../img/im-not-a-wall.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    position: absolute;
+    color: white;
+    left: 50%;
+    font-size: 18px;
+    bottom: 116px;  
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    transform: translateX(-50%);
+}
+
+.emblema-one-regular {
+    font-family: "Emblema One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+
+.title{
+    position: absolute; /* Position it absolutely */
+    top: 80px; /* Moves the title down 50 pixels from the top */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Correct for centering */
+    color: white;
+    font-size: 60px;
+    display: flex;  
+    font-family: "Emblema One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+    animation: fadeText 6s ease-in-out infinite;
+}
+
+.image {
+    width: 30%; /* Full width */
+    top: 12%;
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position absolute to overlap the text */
+    opacity: 0; /* Start hidden */
+    animation: fadeImage 6s ease-in-out infinite; /* Animation for fading image */
+    z-index: 1; /* Ensure image is below the text */
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0.5; /* Fully transparent */
+    }
+}
+
+@keyframes fadeText {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Fully transparent */
+    }
+}
+
+/* Animation for fading image */
+@keyframes fadeImage {
+    0%, 100% {
+        opacity: 0; /* Fully transparent */
+    }
+    50% {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+
+.invisible-button {
+    background-color: transparent; /* No background color */
+    border: none;                 /* No border */
+    color: transparent;           /* Text color is transparent */
+    cursor: pointer;              /* Change cursor to pointer on hover */
+    position: absolute;           /* Positioning (optional, can be adjusted) */
+    width: 100px;                 /* Set the width */
+    cursor: pointer;
+    height: 50px;                 /* Set the height */
+    /* You can set the top and left values to position it as needed */
+    top: 20px;                    /* Adjust as needed */
+    left: 20px;                   /* Adjust as needed */
+}
+
+/* Optional: Add a hover effect */
+.invisible-button:hover {
+    outline: 1px solid rgba(255, 255, 255, 0.5); /* Optional visual feedback on hover */
+}
