@@ -19,6 +19,46 @@ body {
       opacity: 1;
     }
   }
+
+  .me {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center; /* Центрує блоки по вертикалі відносно один одного */
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .leftImage {
+    display: flex;
+    align-items: center; /* Центрує ліву картинку по висоті контейнера */
+  }
+  
+  .leftImage img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  .leftImage img:hover {
+    transform: scale(1.1); /* Збільшення зображення при наведенні */
+    box-shadow: 0px 10px 20px rgba(2, 2, 5, 5); /* Тінь для об'ємного ефекту */
+    border-radius: 20px; /* Зберігаємо заокруглення при наведенні */
+  }
+  
+  .text-box {
+    flex-grow: 1;
+    background-color: #8c4c4c;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    margin-left: 60px;
+    text-align: justify;
+  }
+
+
 .sinop{
   display: flex; /* Встановлюємо flexbox для горизонтального вирівнювання */
   justify-content: center; /* Горизонтальне вирівнювання по центру */
@@ -83,3 +123,23 @@ label {
   background-color: #45a049;
 }
 
+.animation-div {
+  display: flex;
+  height: 100vh;
+  background-color: #111;
+  width: auto;
+}
+
+.animation-div canvas {
+  margin: auto;
+  z-index: 99;
+}
+
+.animation-div span {
+  color: #777;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  user-select: none;
+  z-index: 100;
+}
