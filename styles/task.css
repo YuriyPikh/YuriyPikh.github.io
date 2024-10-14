@@ -143,3 +143,17 @@ label {
   user-select: none;
   z-index: 100;
 }
+
+.vinyl-picture {
+  position: fixed; 
+  top: 3%; 
+  left: 1.5%; 
+  width: 6%; 
+  height: auto; 
+  z-index: 98; 
+  transition: transform 0.3s ease; 
+}
+
+.vinyl-picture:hover {
+  transform: scale(1.1); /* Scale up slightly when hovered */
+}
